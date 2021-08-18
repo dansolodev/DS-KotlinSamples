@@ -17,11 +17,11 @@ class OperationSamplesArray {
      */
     val evenNumbers = arrayOf(2, 4, 6, 8)
     //It’s also possible to create an array with all of its values set to a default value:
-    val fiveFives = Array(5) { 5 } // 5, 5, 5, 5, 5
+    val threeFives = Array(3) { 5 } // 5, 5, 5
 
     // READ
     /**
-     * Go through all the elements, one by one
+     * Iterate over all the elements, one by one
      */
     fun printArray(array: Array<*>) {
         for (idx in array) {
@@ -47,10 +47,9 @@ class OperationSamplesArray {
 
     // INSERT
     /**
-     * To insert a new element in an array we can't do it in a direct way because when we use arrayOf, intArrayOf, etc,
-     * because we create an in mutable array.
-     * To do that we need convert array to mutable list with toMutableList() function.
-     * Or we can create a function to return a new array and override our array val, but inside we use toMutableList() function.
+     * To insert a new element in an array we can't do it in a direct way  we use arrayOf, intArrayOf, etc,
+     * because we create an immutable array.
+     * To do that we need the convert array to a mutable list with toMutableList() function.
      */
     val arrayToAddNewElement = arrayOf(0, 1, 2, 3, 4, 5, 6)
 
@@ -74,9 +73,9 @@ class OperationSamplesArray {
 
     }
 
-    // RESEARCH
+    // SEARCH
     /**
-     * To do a research within an array we need give value to research and we need iterate all array positions
+     * To do a search within an array we need give value to research and we need iterate all array positions
      */
     fun findElement(array: Array<Int>, value: Int): Boolean {
         var existValue = false

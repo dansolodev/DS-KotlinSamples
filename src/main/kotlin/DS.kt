@@ -1,7 +1,7 @@
 fun main() {
     // Arrays
     val sample = OperationSamplesArray()
-    sample.printArray(sample.fiveFives)
+    sample.printArray(sample.threeFives)
     sample.printArrayForeach(sample.vowels)
     sample.printArrayForeachIndexed(sample.evenNumbers)
 
@@ -15,10 +15,11 @@ fun main() {
     sample.update(2, 100)
     sample.printArrayForeachIndexed(sample.arrayToUpdateElement)
 
-    println("RESEARCH")
+    println("SEARCH")
     val exist = sample.findElement(sample.arrayToUpdateElement, 9)
     if (exist) println("Value find") else println("Value isn't exists")
 
+    println("REVERSED ARRAY")
     val reversedVowels = sample.vowels.reversedArray()
     sample.printArray(reversedVowels)
 
